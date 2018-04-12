@@ -3,14 +3,16 @@
 }
 body{
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
 }
 
 .home-content{
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../images/home.jpg') no-repeat center top;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../images/home.jpg') no-repeat center top;
   background-attachment:fixed;
   background-size: cover;
+  height: 700px;
 }
 header{
   position: fixed;
@@ -42,22 +44,73 @@ header .dropdown{
   display: none;
 }
 
+/* HOME */
 #home {
   padding: 80px 0 150px;
   text-align: center;
 }
+
 #home h1{
   color: white;
-  font-weight: normal;
-  font-size: 50px;
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 150px;
   margin-bottom: 10px;
+  animation-duration: 1s;
+  animation-name: slideToDown;
+  animation-iteration-count: 1;
 }
+@keyframes slideToDown {
+  from {
+    margin-top: 0;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 150px;
+    opacity:100%;
+  }
+}
+
 #home p{
   color: white;
-  margin-top: 40px;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  animation-duration: 2s;
+  animation-name: slideToLeft;
+  animation-iteration-count: 1;
 }
+@keyframes slideToLeft {
+  from {
+    margin-left: 100%;
+    width: 300%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    opacity:100%;
+  }
+}
+
 #home .social{
   margin-top: 50px;
+  animation-duration: 2s;
+  animation-name: slideToUp;
+  animation-iteration-count: 1;
+}
+@keyframes slideToUp {
+  from {
+    margin-top: 350px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 50px;
+    opacity:100%;
+  }
 }
 #home .social a{
   color: white;
@@ -75,20 +128,59 @@ header .dropdown{
   background-color: rgb(217, 130, 28)
 }
 
-#servicios{
-  padding: 60px 0;
+/* ABOUT-ME */
+#about-me{
   text-align: center;
+  padding: 60px 0;
+  line-height:1.5;
 }
-#servicios .info{
-  margin-top: 40px;
-  width: 27%;
-  display: inline-block;
+#about-me .about-text{
+  margin-top: 60px;
+  text-align: justify;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
-#servicios .info img{
-  width: 180px;
-  height: 180px;
+#about-me .table{
+  margin-top: 0;
+  text-align: left;
+}
+#about-me .table p{
+  border-bottom: 1px solid gray;
 }
 
+#about-me img.foto{
+  width: 50%;
+  border-radius: 50%;
+  border: 4px solid rgb(187, 119, 69);
+}
+#about-me .icons{
+  margin-top: 50px;
+}
+#about-me .icons .icon{
+  text-align: right;
+  display: inline-block;
+  margin-left: 30px;
+}
+#about-me .icons .icon img{
+  text-align: left;
+  width: 30px;
+  height: 30px;
+}
+#about-me .icons .icon p{
+  margin-top: 0;
+}
+#about-me .info{
+  position: relative;
+  line-height: 1.5;
+  width: 38%;
+  height: auto;
+  margin: 20px ;
+  display: inline-block;
+  text-align: center;
+}
+
+/* PORTFOLIO */
 .background{
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../images/portafolio/fondo.png') no-repeat center top;
   background-attachment:fixed;
@@ -100,13 +192,42 @@ header .dropdown{
   color: white;
 }
 #portafolio .info {
-  background-color: rgba(77, 75, 75, 0.6);
+  position: relative;
   margin-top: 40px;
   line-height: 1.5;
-  width: 25%;
-  margin: 1%;
+  /* width: 30%; */
+  margin:20px ;
   display: inline-block;
   text-align: center;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(187, 119, 69, 0.74);
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.info:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  cursor: pointer;
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 #portafolio h2{
   margin-bottom: 60px;
@@ -114,13 +235,60 @@ header .dropdown{
 #portafolio .info img{
   opacity: 1;
   border-radius: 5px;
-  width: 100%;
-  height: 300px;
+  width: 300px;
+  height: 250px;
   background-size: cover;
 }
-#portafolio .info img:hover{
-  opacity: 0.5;
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+
+.modal-content {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+}
+p.description{
+  text-align: left;
+  margin: 0px;
+  padding: 30px;
+}
+.modal-content img{
+  display: block;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #portafolio .info p{
   padding: 10px;
 }
@@ -175,7 +343,7 @@ footer p{
   margin-right: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   body{
     font-size: 14px;
   }
@@ -252,7 +420,7 @@ footer p{
     margin-right: auto;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 680px) {
   header nav{
     display: none;
   }
@@ -292,7 +460,7 @@ footer p{
   .dropdown:hover .dropdown-content {display: block;}
   .dropdown:hover .fa {color:  rgb(217, 130, 28);}
 }
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   body{
     font-size: 12px;
   }
