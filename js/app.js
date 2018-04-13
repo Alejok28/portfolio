@@ -48,12 +48,13 @@ $('div#link').on('click', function(){
   modal.style.display = "block";
   var img = this.dataset.src;
   var title = this.dataset.title;
-  var p =this.dataset.text
+  var p =this.dataset.text;
   var url = this.dataset.url;
-  $(".modal-content").append("<h3>"+title+"</h3>");
+  var repo = this.dataset.repo;
+  // $(".modal-content").append("<h3>"+title+"</h3>");
   $(".modal-content").append("<img src='" + img + "'>");
-  $(".modal-content").append("<p class='description'>TECNOLOGÍAS UTILIZADAS: "+p+"</p>")
-  $(".modal-content").append('<a class="go-link"href="'+ url +'" target="_blank">Vistar</a>')
+  $(".modal-content").append("<p class='description'>"+p+"</p>")
+  $(".modal-content").append('<div class="project-links"><a href="'+ repo +'" target="_blank">Repositorio</a><a href="'+ url +'" target="_blank">Vistar</a></div>')
 })
 
 // When the user clicks on <span> (x), close the modal

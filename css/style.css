@@ -255,31 +255,49 @@ header .dropdown{
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.72); /* Black w/ opacity */
 }
 
 .modal-content {
   text-align: center;
   background-color: rgb(255, 255, 255);
-  border-radius: 8px;
   margin: 5% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 70%; /* Could be more or less, depending on screen size */
+  /* padding: 20px; */
+  width: 65%; /* Could be more or less, depending on screen size */
 }
-p.description{
-  text-align: left;
-  margin: 0px;
-  padding: 30px;
+.modal-content h3{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 2px solid gray;
+  padding: 10px;
 }
 .modal-content img{
   display: block;
-  border-radius: 8px;
-  border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   height: 100%;
+}
+.modal-content p.description{
+  border-top: 2px solid gray;
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+  font-weight: normal;
+}
+.modal-content .project-links{
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+}
+.modal-content .project-links a{
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(187, 119, 69);
+  border-radius: 5px;
+  text-decoration: none;
 }
 .close {
   color: #aaa;
