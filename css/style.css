@@ -14,10 +14,25 @@ body{
   background-size: cover;
   height: 700px;
 }
+#header-wrap {
+  width: 100%;
+  position: fixed;
+}
+#header {
+  width: 100%;
+  position: absolute;
+}
 header{
   position: fixed;
   background-color: rgba(48,48,48,0.5);
   width: 100%;
+
+ top: 0;
+ transition: top 0.5s ease-in-out;
+}
+
+.nav-up {
+  top: -80px;
 }
 header img{
   margin-left: 25px;
@@ -184,7 +199,6 @@ header .dropdown{
   margin-top: 0;
 }
 #about-me .info{
-  position: relative;
   line-height: 1.5;
   width: 25%;
   height: auto;
