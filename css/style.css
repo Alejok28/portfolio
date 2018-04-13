@@ -352,10 +352,9 @@ header .dropdown{
 #contacto .info{
   text-align: center;
   display: inline-block;
-  width: 38%;
+  width: 45%;
   border-radius: 5px;
-  margin: 15px 15px;
-  background: rgb(204, 204, 204);
+  margin: 25px 15px;
 }
 #contacto .info i{
   color: rgb(217, 130, 28);
@@ -363,7 +362,58 @@ header .dropdown{
   font-weight: bold;
   font-size: 35px;
 }
-
+input#email{
+  padding-left: 30px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid rgb(187, 119, 69);
+  background-color: rgb(237, 237, 237);
+  height: 50px;
+  margin: 10px;
+  width: 100%;
+}
+textarea#message{
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid rgb(187, 119, 69);
+  background-color: rgb(237, 237, 237);
+  height: 150px;
+  margin: 10px;
+  width: 100%;
+}
+button.btn{
+  font-size: 20px;
+  width: 40%;
+  background-color: rgb(187, 119, 69);
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+}
+span.fa{
+  padding-right: 10px;
+}
+#contacto .social{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+#contacto .social a{
+  color: white;
+  background-color:  black;
+  display: inline-block;
+  border-radius: 50%;
+  font-size:30px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 15px;
+}
+#contacto .social a:hover{
+  background-color: rgb(217, 130, 28)
+}
 footer{
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../Images/footer2.jpg') no-repeat center top;
   background-attachment:fixed;
