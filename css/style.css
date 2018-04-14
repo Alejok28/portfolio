@@ -413,7 +413,7 @@ button.btn{
   padding: 10px;
   border-radius: 6px;
   text-decoration: none;
-  color: white;
+  background-color: rgb(251, 251, 251);
 }
 button.btn:hover{
   color: white !important;
@@ -767,6 +767,7 @@ footer p{
     font-size: 12px;
     padding: 5px;
     margin-top: 2px;
+    background-color: rgb(251, 251, 251);
   }
 
   footer{
