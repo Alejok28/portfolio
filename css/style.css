@@ -169,7 +169,6 @@ header .dropdown{
 #about-me .table p{
   border-bottom: 1px solid gray;
   transition: 0.5s;
-
 }
 #about-me img.foto{
   transition: 0.5s;
@@ -488,7 +487,7 @@ footer p{
   margin-right: auto;
 }
 /* ---------------------------------1028px'----------------------------- */
-@media (max-width: 1028px) {
+@media (max-width: 992px) {
   body{
     font-size: 14px;
   }
@@ -517,7 +516,7 @@ footer p{
     width: 70%;
   }
   #about-me img.foto{
-    width: 250px;
+    width: 80%;
   }
 
   #portafolio {
@@ -580,7 +579,10 @@ footer p{
 }
 
 /* -----------------------------------------680px------------------------------------ */
-@media (max-width: 680px) {
+@media (max-width: 768px) {
+  .home-content{
+    height: 550px;
+  }
   header nav{
     display: none;
   }
@@ -647,13 +649,23 @@ footer p{
 }
 
 /* ---------------------------------------<680px------------------------- */
-@media (max-width: 680px) {
+@media (max-width: 576px) {
   body{
     font-size: 12px;
   }
 
   .home-content{
     height: 400px;
+  }
+  header{
+    height: 50px;
+  }
+  header .dropdown{
+    padding: 15px 0;
+  }
+  header img{
+    margin: 5px;
+    height: 50px;
   }
 
   #home {
@@ -665,11 +677,11 @@ footer p{
   }
   #home p{
     color: white;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 12px;
   }
   #home .social{
-    margin-top: 30px;
+    margin-top: 50px;
   }
   #home .social a{
     font-size:20px;
@@ -679,12 +691,13 @@ footer p{
   }
 
   #about-me {
-  padding-left: 60px;
-
+  padding:10px;
+  }
+  #about-me .table p{
+    width: 100%;
   }
   #about-me .info{
-    margin-left: 60px;
-    width: 100%;
+    width: 80%;
   }
   #about-me .habilidades{
     margin-top: 40px;
@@ -692,7 +705,7 @@ footer p{
   }
   #about-me .icons .icon img{
     width: 20px;
-    height: 25px;
+    height: 20px;
   }
 
   #portafolio {
@@ -729,21 +742,33 @@ footer p{
     padding: 5px;
 
   }
-
   #contacto{
-    padding: 60px 0 15px 0;
+    padding-top: 20px;
+  }
+  #contacto .about-me{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  #contacto #map{
+    display: none;
   }
   #contacto .info{
-    margin: 10px 0;
-    width: 70%;
+    /* text-align: center;
+    display: inline-block; */
+    width: 85%;
   }
-  #contacto .info i{
-    margin: 5px 0;
-    font-size: 30px;
+
+  #contacto .fa {
+  margin-top: 20px;
+  }
+  button.btn{
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 2px;
   }
 
   footer{
-    height: 70px;
+    height: 50px;
     display: block;
   }
   footer img{
@@ -753,16 +778,10 @@ footer p{
   }
   footer p{
     font-size: 14px;
-    padding: 2px 0 5px 50px;
+    margin: 0;
+    padding: 5px 0 5px 50px;
   }
 
-  #contacto .fa {
-    font-size:25px;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    margin-right: 15px;
-  }
 
   .container{
     width: auto;
