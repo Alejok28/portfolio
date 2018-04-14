@@ -149,8 +149,7 @@ header .dropdown{
 
 /* ABOUT-ME */
 #about-me{
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
   padding: 60px 0;
   line-height:1.8;
 }
