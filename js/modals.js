@@ -20,7 +20,7 @@ var modal = document.getElementById('myModal');
 		// $(".modal-content").append("<h3>"+title+"</h3>");
 		$(".modal-content").append("<img src='" + img + "'>");
 		$(".modal-content").append("<p class='description'>"+p+"</p>")
-		$(".modal-content").append('<div class="project-links"><a href="'+ repo +'" target="_blank">Repositorio</a><a href="'+ url +'" target="_blank">Vistar</a></div>')
+		$(".modal-content").append('<div class="project-links"><a href="'+ repo +'" target="_blank">Repository</a><a href="'+ url +'" target="_blank">Visit</a></div>')
 	})
 
 	// When the user clicks on <span> (x), close the modal
